@@ -1,0 +1,88 @@
+.calendar {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    width: max-content;
+    margin: 50px auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 100px;  /* setting width to 150px */
+    height: 100px; /* setting height to 150px */
+    border: 1px solid #ccc; /* adding border */
+    text-align: center;
+    vertical-align: middle;
+    transition: transform 0.3s; /* this will make the hover effect smooth */
+}
+
+/*... [existing CSS] ...*/
+
+td[data-link] {
+    cursor: pointer;
+    background-color: #e0e0e0; /* color indicating a link is added */
+}
+
+/* Hover effect */
+td:hover {
+    transform: scale(1.1); /* this will scale the cell size by 10% when hovered */
+    background-color: #f5f5f5; /* optional: changes background color on hover */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Added to vertically align items in the header */
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Gradient background */
+    background: linear-gradient(to right, #6DD5FA, #2980B9);
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center calendar vertically */
+    justify-content: center; /* Center calendar horizontally */
+}
+
+.calendar {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the calendar */
+    padding: 20px;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
+    /*... rest of the .calendar styles ...*/
+}
+
+/*... [existing CSS] ...*/
+
+.holiday {
+    background-color: #FFD700;  /* Gold background for holidays */
+    position: relative;         /* Relative positioning to place the star */
+}
+
+.holiday::before {
+    content: '★';              /* Star symbol */
+    position: absolute;
+    top: 5px;                  /* Position the star near the top of the cell */
+    right: 5px;
+    font-size: 18px;
+}
